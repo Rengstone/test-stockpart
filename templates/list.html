@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/"><button>back</button></a>
+    <table>
+        <tr>
+            <th>No</th>
+            <th>Merk</th>
+            <th>Part Number</th>
+            <th>Nama Part</th>
+            <th>Serial Number</th>
+            <th>Barcode</th>
+            <th>QTY</th>
+            <th>SSI Area</th>
+            <th>Kode SP</th>
+            <th>SP Area</th>
+            <th>Wilayah</th>   
+        </tr>
+        {% for items in result %}
+        <tr>
+            {% for item in items %}
+            <td>{{ item }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
